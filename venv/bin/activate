@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/conn3ct3d/FSDI/FSDI-112/venv"
+VIRTUAL_ENV="/home/conn3ct3d/FSDI/mb/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

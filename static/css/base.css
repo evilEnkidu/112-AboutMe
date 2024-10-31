@@ -1,44 +1,336 @@
 *{
-        padding: 0;
-        margin: 0;
+      margin: 0;
+      padding: 0;
+}
+          /* Ensure the body and html are 100% height */
+      html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+      }
+          /* Make the container flex-grow to take available space */
+      .container {
+            flex: 1;
+      }
+          /* Style the footer */
+      .footer {
+            background-color: #f8f9fa;
 
+            text-align: center;
+      }
+
+/* HOME styling */
+.title-center, .subtitle-center{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 500;
 }
-h1{
-font-family: "DM Sans", Arial, Helvetica, sans-serif;
+.home-description{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-h3{
-        font-weight: lighter;
-        font-size: 22px;
-        padding-top: 10px;
-        padding-right: 20px;
+.home-container{
+      background-color: rgb(242, 242, 242);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(9, 9, 9, 0.541);
+}
+.home-container h1, h3{
+      text-align: center;
+      padding: 5px;
+}
+.home-container p{
+      font-size: 22px
+}
+.home-flex{
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 
+/* MAKE Post Form CSS */
 
+      /* Container styling */
+      .form-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Title styling */
+      .new-title {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      
+      /* Form field styling */
+      form p {
+            margin-bottom: 1.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      
+      form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+      }
+      
+      form input[type="text"],
+      form input[type="email"],
+      form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      
+      form input[type="text"]:focus,
+      form input[type="email"]:focus,
+      form textarea:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      
+      /* Submit button enhancement */
+      .btn-success {
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+      }
+      
+      .btn-success:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
 
-.turtle{
-        height: 225px;
-        border-radius: 200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-}
-.title{
-        text-align: center;
-        font-weight: medium;
-        padding-top: 50px;
-        padding-bottom: 25px;
-        letter-spacing: 3px;
-}
-.text-container{
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        font-size: 20px;
+/* LIST view CSS */
+      /* Posts grid container */
+.posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  /* Card styling */
+  .post-card {
+      border: none;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .post-card .card-body {
+      padding: 1.5rem;
+  }
+  
+  .post-card .card-title {
+      color: #333;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      padding-bottom: 3px;
+  }
+  
+  .post-card .card-subtitle {
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .post-card .card-text {
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .post-card .card-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+  }
+  
+  .post-card .card-link:hover {
+      color: #0056b3;
+      text-decoration: underline;
+  }
 
-}
-p{
-        font-size: 1.15rem;
-        line-height: 1.6;
-        text-align: center;
-}
+/* DETAIL view of every post */
+  /* Post detail container */
+.post-detail {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Post title */
+  .post-title {
+      color: #333;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+  }
+  
+  /* Post subtitle */
+  .post-subtitle {
+      color: #555;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+  }
+  
+  /* Post metadata */
+  .post-meta {
+      display: block;
+      color: #6c757d;
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+  }
+  
+  /* Post content */
+  .post-content {
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-top: 1.5rem;
+  }
+  
+  .post-content p {
+      margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .post-detail {
+          padding: 1.5rem;
+          margin: 1rem;
+      }
+  
+      .post-title {
+          font-size: 2rem;
+      }
+  
+      .post-subtitle {
+          font-size: 1.25rem;
+      }
+  }
+
+/* ABOUT developer css styling */
+  /* About page container */
+  .profile-picture{
+      height: 350px;
+      padding-bottom: 10px;
+      border-radius: 999px;
+  }
+.about-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  
+  /* Developer name title */
+  .about-title {
+      color: #333;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+  }
+  
+  .about-title:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #007bff;
+      margin: 0.5rem auto;
+  }
+  
+  /* Subtitle with link */
+  .about-subtitle {
+      color: #555;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+  }
+  
+  .about-subtitle a {
+      color: #dc3545;
+      text-decoration: none;
+      transition: all 0.2s;
+      position: relative;
+  }
+  
+  .about-subtitle a:hover {
+      color: #c82333;
+  }
+  
+  .about-subtitle a::after {
+      content: '🔥';
+      position: relative;
+      top: -2px;
+      margin-left: 4px;
+      font-size: 0.9em;
+  }
+  
+  /* Description text */
+  .about-description {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 1.5rem;
+      font-style: italic;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .about-container {
+          margin: 1.5rem;
+          padding: 1.5rem;
+      }
+  
+      .about-title {
+          font-size: 2rem;
+      }
+  
+      .about-subtitle {
+          font-size: 1.25rem;
+      }
+  }
